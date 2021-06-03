@@ -11,6 +11,7 @@ import { ConnexionclientComponent } from './pages/connexionclient/connexionclien
 import { CreationCompteClientComponent } from './pages/creation-compte-client/creation-compte-client.component';
 import { ProduitComponent } from './components/produit/produit.component';
 import { ProduitSelecteComponent } from './pages/produit-selecte/produit-selecte.component';
+import { PanierComponent } from './components/panier/panier.component';
 
 
 const routes: Routes = [
@@ -35,9 +36,11 @@ const routes: Routes = [
   },
    
   {
-    path:'produits/:id', component:ProduitComponent
-  
+    path:'panier',
+    component:PanierComponent
+   
   },
+  
   {
     path:'header',
     component: HeaderComponent

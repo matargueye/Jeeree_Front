@@ -1,1 +1,24 @@
-<p>panier works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">designation</th>
+            <th scope="col">quantitestock</th>
+            <th scope="col">Prix unitaire</th>
+            <th scope="col">Prix totale</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let produit of produits;">
+        <tr>
+            <th scope="row">{{produit.id}}</th>
+            <td>{{produit.designation}}</td>
+            <td>{{produit.quantitestock}}</td>
+            <td>{{produit.prixunitaire}}</td>
+            <td>{{produit.prixunitaire }}*{{ nbProduit}}</td>
+            <td></td>
+
+
+        </tr>
+    </tbody>
+</table>
