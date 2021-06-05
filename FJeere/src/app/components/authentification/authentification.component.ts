@@ -41,11 +41,11 @@ export class AuthentificationComponent implements OnInit {
   this.authenticationService.login(user).subscribe(
     data => {
       console.log(data);
-      this.router.navigate(['/login']);
+      this.router.navigate(['/client']);
     },
     error => {
-     /* this.errorMessage = 'username ou mot de passe incorrect';*/
-      console.log(error);
+      this. returnUrl = 'username ou mot de passe incorrect';
+      console.log( this.returnUrl );
 
   });
   }

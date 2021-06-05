@@ -30,5 +30,10 @@ export class AuthentificationService {
             return user;
         }));
 }
+logout() {
+  // remove user from local storage and set current user to null
+  localStorage.removeItem('currentUser');
+  this.currentUserSubject.next(null);
+}
 
 }

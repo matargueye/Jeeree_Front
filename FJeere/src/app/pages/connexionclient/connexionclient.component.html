@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <html>
 
 <head>
@@ -11,27 +12,31 @@
 </head>
 
 <body>
+
     <header>
         <app-header></app-header>
     </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <app-side-bare></app-side-bare>
+            </div>
+            <div class="col-8">
+                <app-authentification> </app-authentification>
 
-    <div class="row">
-        <div class="col-4">
-            <app-side-bare></app-side-bare>
-        </div>
-        <div class="col-8">
-
-            <app-authentification></app-authentification>
-            <br>
-            <br>
-            <br>
-            <app-listeproduits></app-listeproduits>
+                <br>
+                <br>
+                <app-listeproduits></app-listeproduits>
+            </div>
         </div>
     </div>
+
+
 
     <footer>
         <app-footer></app-footer>
     </footer>
+
 
 
 </body>

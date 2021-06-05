@@ -12,6 +12,8 @@ import { CreationCompteClientComponent } from './pages/creation-compte-client/cr
 import { ProduitComponent } from './components/produit/produit.component';
 import { ProduitSelecteComponent } from './pages/produit-selecte/produit-selecte.component';
 import { PanierComponent } from './components/panier/panier.component';
+import { EspaceclientComponent } from './pages/espaceclient/espaceclient.component';
+import { PaniersComponent } from './pages/paniers/paniers.component';
 
 
 const routes: Routes = [
@@ -31,13 +33,13 @@ const routes: Routes = [
     component: CreationCompteClientComponent
   },
   {
-    path:'',
-    component:ListeproduitsComponent
+    path:'client',
+    component:EspaceclientComponent
   },
    
   {
     path:'panier',
-    component:PanierComponent
+    component:PaniersComponent
    
   },
   

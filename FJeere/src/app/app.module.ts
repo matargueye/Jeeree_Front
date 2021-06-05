@@ -23,6 +23,8 @@ import { CreationCompteClientComponent } from './pages/creation-compte-client/cr
 import { ProduitComponent } from './components/produit/produit.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { ProduitSelecteComponent } from './pages/produit-selecte/produit-selecte.component';
+import { PaniersComponent } from './pages/paniers/paniers.component';
+import { NavbarrComponent } from './components/navbarr/navbarr.component';
 
 
 
@@ -42,6 +44,8 @@ import { ProduitSelecteComponent } from './pages/produit-selecte/produit-selecte
     ProduitComponent,
     PanierComponent,
     ProduitSelecteComponent,
+    PaniersComponent,
+    NavbarrComponent,
 
  
    

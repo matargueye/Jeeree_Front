@@ -1,6 +1,9 @@
+.container {
+    width: 100%;
+    height: auto
+}
+
 .row {
-    width: 1000px;
-    margin-left: 190px;
     margin-top: 60px;
     margin-right: 20px;
     height: auto;
@@ -10,14 +13,14 @@
 
 .col-4 {
     float: left;
-    width: 200px;
     background-color: rgba(255, 255, 255, 0.993);
     height: auto;
+    width: 300px;
 }
 
 .col-8 {
     float: right;
-    margin-left: 40px;
     width: 700px;
     height: auto;
+    margin-left: 40px;
 }

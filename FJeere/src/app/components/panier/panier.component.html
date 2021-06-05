@@ -1,45 +1,51 @@
 <div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">designation</th>
-                <th scope="col">quantitestock</th>
-                <th scope="col">Prix unitaire</th>
-                <th scope="col">Prix totale</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let produit of produits;">
-            <tr>
-                <th scope="row">{{produit.id}}</th>
-                <td>{{produit.designation}}</td>
-                <td>{{produit.quantitestock}}</td>
-                <td>{{produit.prixunitaire}}</td>
-                <td>{{ produit.prixunitaire * produit.quantite}}</td>
+    <div class="row" *ngFor="let produit of produits;">
+        <div class="col-sm">
+            <p class="nom">{{ produit.designation }}<br>
+                <img [src]="urlimg+produit.image" class="produit" alt=" ... ">
+        </div>
+        <div class="col-sm">
 
+        </div>
+        <div class="col-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Prix unitaire</th>
+                        <th scope="col">Prix totale</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let produit of produits;">
+                    <tr>
+                        <th scope="row">{{produit.id}}</th>
+                        <td>{{produit.prixunitaire}}</td>
+                        <td>{{ produit.prixunitaire * produit.quantite}}</td>
 
-                <td>
-                    <div class="d-flex align-items-center">
-                        <span><button class="btn btn-success" (click)="addQuantity(produit.id)"> + </button></span>
-                        <span><button class="btn btn-warning" (click)="delQuantity(produit.id)" > - </button></span>
-                        <span><button class="btn btn-danger" (click)="remove(produit.id)" >X</button></span>
-                    </div>
-
-                </td>
-                <tr>
-
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5" class="text-right">
-                    <h3>Total:</h3>
-                </td>
-                <td>
-                    <h3>{{ total }}</h3>
-                </td>
-                <td></td>
-            </tr>
-        </tfoot>
-    </table>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <span><button class="" (click)="addQuantity(produit.id)"> + </button></span>
+                                <span><button class="" (click)="delQuantity(produit.id)" >- </button></span>
+                                <span><button class="btn btn-danger" (click)="remove(produit.id)" >X</button></span>
+                            </div>
+                        </td>
+                        <tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <h3>Total:</h3>
+                        </td>
+                        <td>
+                            <h3>{{ total }}</h3>
+                        </td>
+                        <td>
+                            <span><button class="commande" > commander </button></span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
 </div>

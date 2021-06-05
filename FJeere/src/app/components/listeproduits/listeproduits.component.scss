@@ -28,8 +28,6 @@
     font-size: 15px;
 }
 
-.nom {}
-
 .rating a {
     color: #aaa;
     text-decoration: none;
@@ -43,4 +41,8 @@
 .rating a:focus~a {
     color: rgb(46, 148, 216);
     cursor: pointer;
+}
+
+.btn {
+    box-shadow: 1px 1px 12px rgba(185, 181, 181, 0.514);
 }

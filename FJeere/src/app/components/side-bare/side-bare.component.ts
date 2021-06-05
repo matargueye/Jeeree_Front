@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthentificationService } from 'src/app/services/authentification.service';
 
 @Component({
   selector: 'app-side-bare',
@@ -8,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class SideBareComponent implements OnInit {
   
 
-  constructor() { }
+  constructor(private authService:AuthentificationService ,private route:Router ) { }
 
   ngOnInit(): void {
+  }
+  onLogout() {
+    localStorage.removeItem('token');
+    localStorage.clear();
+    this.authService.logout();
+    return this.route.navigate(['login']);
   }
 
 }

@@ -45,12 +45,15 @@ export class CompteClientComponent implements OnInit {
       nom: this.loginForm.value.nom ,
       prenom:this.loginForm.value.prenom,
       adresse_client:this.loginForm.value.adresse_client,
-      tel_client:this.loginForm.value.tel_client
+      tel_client:this.loginForm.value.tel_client,
   };
+  
   this.clientservice.CreateCompteClient(client).subscribe(
     data => {
       console.log(data);
-      this.router.navigate(['/compte_client']);
+      return this.router.navigate(['/compte_client']);
+       
+
     },
     error => {
      /* this.errorMessage = 'username ou mot de passe incorrect';*/

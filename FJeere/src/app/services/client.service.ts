@@ -11,7 +11,7 @@ export class ClientService {
   constructor( private http:HttpClient) { }
 
 CreateCompteClient(data:any){
-  return this.http.post<Client[]>(`${environment.apiUrl}/new/clients/`,data);
+  return this.http.post<Client[]>(`${environment.apiUrl}/new/clients`,data);
  
 }
 
