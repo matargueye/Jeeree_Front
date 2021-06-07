@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PanierService } from 'src/app/services/panier.service';
 import { BehaviorSubject } from 'rxjs';
+import { Produit } from 'src/app/models/produit';
 
 @Component({
   selector: 'app-panier',
@@ -8,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./panier.component.scss']
 })
 export class PanierComponent implements OnInit {
-  produits:any[];
+  produits:Produit[];
   nbProduit:number;
   urlimg = 'data:image/png;base64,';
   totalUpdate = new BehaviorSubject([]);
@@ -17,6 +18,7 @@ export class PanierComponent implements OnInit {
   constructor(private panier:PanierService) { }
 
   ngOnInit(): void {
+    
     this.produits=JSON.parse(localStorage.getItem('cart'));
     console.log( this.produits);
 
@@ -27,8 +29,10 @@ export class PanierComponent implements OnInit {
       );
         // tslint:disable-next-line: prefer-for-of
     this.produits.forEach((element) => {
-      this.total += (element.quantite * element.prix);
+      this.total += (element.quantite * element.prixunitaire);
+    console.log( this.total );
     });
+
 
   }
   removeCart(id){

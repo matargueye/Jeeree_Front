@@ -11,23 +11,25 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">id</th>
+
                         <th scope="col">Prix unitaire</th>
+                        <th scope="col">Quantité</th>
                         <th scope="col">Prix totale</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody *ngFor="let produit of produits;">
                     <tr>
-                        <th scope="row">{{produit.id}}</th>
+
                         <td>{{produit.prixunitaire}}</td>
-                        <td>{{ produit.prixunitaire * produit.quantite}}</td>
+                        <td>{{produit.quantite}}</td>
+                        <td>{{ produit.quantite * produit.prixunitaire }}</td>
 
                         <td>
                             <div class="d-flex align-items-center">
                                 <span><button class="" (click)="addQuantity(produit.id)"> + </button></span>
                                 <span><button class="" (click)="delQuantity(produit.id)" >- </button></span>
-                                <span><button class="btn btn-danger" (click)="remove(produit.id)" >X</button></span>
+                                <span><button class="btn btn-danger" (click)= "removeCart(produit.id)" >X</button></span>
                             </div>
                         </td>
                         <tr>
