@@ -14,11 +14,12 @@ import { ProduitSelecteComponent } from './pages/produit-selecte/produit-selecte
 import { PanierComponent } from './components/panier/panier.component';
 import { EspaceclientComponent } from './pages/espaceclient/espaceclient.component';
 import { PaniersComponent } from './pages/paniers/paniers.component';
+import { CommandeComponent } from './components/commande/commande.component';
 
 
 const routes: Routes = [
   {
-    path:'acceuille',
+    path:'',
     component: AcceuilleComponent
   },
 
@@ -40,6 +41,12 @@ const routes: Routes = [
   {
     path:'panier',
     component:PaniersComponent
+   
+  },
+   
+  {
+    path:'commande',
+    component:CommandeComponent
    
   },
   

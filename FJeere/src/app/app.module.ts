@@ -25,6 +25,11 @@ import { PanierComponent } from './components/panier/panier.component';
 import { ProduitSelecteComponent } from './pages/produit-selecte/produit-selecte.component';
 import { PaniersComponent } from './pages/paniers/paniers.component';
 import { NavbarrComponent } from './components/navbarr/navbarr.component';
+import { CommandeComponent } from './components/commande/commande.component';
+import { ListecommandeComponent } from './components/listecommande/listecommande.component';
+import {MatDialogModule} from '@angular/material/dialog'; 
+import { PanierService } from './services/panier.service';
+import { CommandeService } from './services/commande.service';
 
 
 
@@ -46,6 +51,8 @@ import { NavbarrComponent } from './components/navbarr/navbarr.component';
     ProduitSelecteComponent,
     PaniersComponent,
     NavbarrComponent,
+    CommandeComponent,
+    ListecommandeComponent,
 
  
    
@@ -62,9 +69,11 @@ import { NavbarrComponent } from './components/navbarr/navbarr.component';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[ CommandeComponent]
 })
 export class AppModule { }

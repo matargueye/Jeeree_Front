@@ -16,6 +16,7 @@ export class AuthentificationComponent implements OnInit {
   returnUrl: string;
   error = '';
   formConnexion: any;
+  
 
   constructor(
       private formBuilder: FormBuilder,
@@ -31,6 +32,7 @@ export class AuthentificationComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
+
   });
   }
   onSubmit(){
@@ -43,11 +45,14 @@ export class AuthentificationComponent implements OnInit {
       console.log(data);
       this.router.navigate(['/client']);
     },
+   
     error => {
       this. returnUrl = 'username ou mot de passe incorrect';
       console.log( this.returnUrl );
 
   });
+
+
   }
 
 }

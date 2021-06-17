@@ -1,7 +1,9 @@
 <div class="container">
+
     <div class="row" *ngFor="let produit of produits;">
+
         <div class="col-sm">
-            <p class="nom">{{ produit.designation }}<br>
+            <p class="nom"><br>{{ produit.designation }}<br>
                 <img [src]="urlimg+produit.image" class="produit" alt=" ... ">
         </div>
         <div class="col-sm">
@@ -10,8 +12,8 @@
         <div class="col-sm">
             <table class="table">
                 <thead>
-                    <tr>
 
+                    <tr>
                         <th scope="col">Prix unitaire</th>
                         <th scope="col">Quantité</th>
                         <th scope="col">Prix totale</th>
@@ -23,7 +25,7 @@
 
                         <td>{{produit.prixunitaire}}</td>
                         <td>{{produit.quantite}}</td>
-                        <td>{{ produit.quantite * produit.prixunitaire }}</td>
+
 
                         <td>
                             <div class="d-flex align-items-center">
@@ -43,11 +45,13 @@
                             <h3>{{ total }}</h3>
                         </td>
                         <td>
-                            <span><button class="commande" > commander </button></span>
+
                         </td>
                     </tr>
                 </tfoot>
             </table>
         </div>
     </div>
+    <span><button class="commande" (click)="openDialog()"> commander </button></span>
 </div>
+<br>

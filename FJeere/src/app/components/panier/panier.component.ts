@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PanierService } from 'src/app/services/panier.service';
 import { BehaviorSubject } from 'rxjs';
 import { Produit } from 'src/app/models/produit';
+import {MatDialog,MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { CommandeComponent } from '../commande/commande.component';
+import { CommandeService } from 'src/app/services/commande.service';
 
 @Component({
   selector: 'app-panier',
@@ -15,7 +18,9 @@ export class PanierComponent implements OnInit {
   totalUpdate = new BehaviorSubject([]);
   total = 0;
 
-  constructor(private panier:PanierService) { }
+  constructor(private panier:PanierService,
+    public dialog: MatDialog,
+    private service:CommandeService) { }
 
   ngOnInit(): void {
     
@@ -35,6 +40,7 @@ export class PanierComponent implements OnInit {
 
 
   }
+  
   removeCart(id){
     for (let i = 0; i < this.produits.length; i++) {
       if (this.produits[i].id === id) {
@@ -61,5 +67,16 @@ export class PanierComponent implements OnInit {
         localStorage.setItem('cart', JSON.stringify(this.produits));
       }
     }
+
+  
   }
+
+  openDialog(){
+    this.service.getCommande();
+    const dialogconfig=new MatDialogConfig();
+    dialogconfig.disableClose=true;
+    dialogconfig.autoFocus=true;
+    dialogconfig.width="60%";
+    this.dialog.open(CommandeComponent, dialogconfig);
+      }
 }
