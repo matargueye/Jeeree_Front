@@ -30,6 +30,8 @@ import { ListecommandeComponent } from './components/listecommande/listecommande
 import {MatDialogModule} from '@angular/material/dialog'; 
 import { PanierService } from './services/panier.service';
 import { CommandeService } from './services/commande.service';
+import {MatButtonModule} from '@angular/material/button';
+ 
 
 
 
@@ -70,7 +72,9 @@ import { CommandeService } from './services/commande.service';
     MatIconModule,
     MatSidenavModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],

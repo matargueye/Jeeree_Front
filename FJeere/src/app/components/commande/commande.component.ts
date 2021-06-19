@@ -15,6 +15,7 @@ import { PanierService } from 'src/app/services/panier.service';
 export class CommandeComponent implements OnInit {
   produits: any;
   roles: any;
+  token: any;
   form: FormGroup;
   submitted = false;
   tab = [];
@@ -30,6 +31,8 @@ export class CommandeComponent implements OnInit {
 
     this.produits = JSON.parse(localStorage.getItem('cart'));
     this.roles = JSON.parse(localStorage.getItem('roles'));
+    this.token = JSON.parse(localStorage.getItem('token'));
+    
 
     this.form = this.formBuilder.group({
   
@@ -53,12 +56,13 @@ export class CommandeComponent implements OnInit {
 
     }
     const commande = {
-      plat: this.tab
+      produit: this.tab
     };
+   
     this.commandeservice.FaireCommande(commande).subscribe( data => {
       alert('Votre commande a été enrégistré avec succes');
     }, error => {
-      alert(error);
+      console.log(error);
     });
   }
   

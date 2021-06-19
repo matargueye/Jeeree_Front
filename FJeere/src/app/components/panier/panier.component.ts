@@ -72,11 +72,7 @@ export class PanierComponent implements OnInit {
   }
 
   openDialog(){
-    this.service.getCommande();
-    const dialogconfig=new MatDialogConfig();
-    dialogconfig.disableClose=true;
-    dialogconfig.autoFocus=true;
-    dialogconfig.width="60%";
-    this.dialog.open(CommandeComponent, dialogconfig);
+    
+    this.dialog.open(CommandeComponent);
       }
 }

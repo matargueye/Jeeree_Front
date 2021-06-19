@@ -31,8 +31,10 @@ export class AuthentificationService {
             const helper = new JwtHelperService();
             const decodedToken = helper.decodeToken(user.token);
             localStorage.setItem('currentUser', JSON.stringify(user));
-            localStorage.setItem('roles', JSON.stringify(decodedToken .roles));
-            localStorage.setItem('username', JSON.stringify(decodedToken .username));
+            localStorage.setItem('roles', JSON.stringify(decodedToken.roles));
+            localStorage.setItem('username', JSON.stringify(decodedToken.username));
+            localStorage.setItem('prenom', JSON.stringify(decodedToken.prenom));
+            localStorage.setItem('nom', JSON.stringify(decodedToken.nom));
         
             this.currentUserSubject.next(user);
             return user;

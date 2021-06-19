@@ -15,6 +15,7 @@ import { PanierComponent } from './components/panier/panier.component';
 import { EspaceclientComponent } from './pages/espaceclient/espaceclient.component';
 import { PaniersComponent } from './pages/paniers/paniers.component';
 import { CommandeComponent } from './components/commande/commande.component';
+import { NavbarrComponent } from './components/navbarr/navbarr.component';
 
 
 const routes: Routes = [
@@ -62,6 +63,13 @@ const routes: Routes = [
     path:'footer',
     component:FooterComponent
   },
+
+
+  {
+    path:'recherche',
+    component:NavbarrComponent
+  },
+  
 
 
   

@@ -1,34 +1,50 @@
-                .row {
-                    width: 1000px;
-                    margin-left: 150px;
-                    margin-top: 60px;
-                    margin-right: 20px;
-                    height: 1000px;
-                }
-                
-                .col-4 {
-                    float: left;
-                    width: 200px;
-                }
-                
-                .categories {
-                    font-size: 18px;
-                    color: white;
-                    background-color: rgb(57, 163, 233);
-                    text-align: center;
-                    border: 1px solid;
-                }
-                
-                .itemp {
-                    text-align: center;
-                    color: rgb(57, 163, 233);
-                }
-                
-                #partenaire {
-                    width: 100px;
-                    height: 100px;
-                }
-                
-                .fas {
-                    color: rgb(57, 163, 233)
-                }
+.container {
+    width: 100%;
+    height: auto
+}
+
+.row {
+    margin-top: 60px;
+    margin-right: 20px;
+    height: auto;
+}
+
+.col-4 {
+    float: left;
+    background-color: rgba(255, 255, 255, 0.993);
+    height: auto;
+    width: 260px;
+}
+
+.col-8 {
+    float: right;
+    width: 700px;
+    height: auto;
+    margin-left: 40px;
+}
+
+.categories {
+    font-size: 18px;
+    color: white;
+    background-color: rgb(57, 163, 233);
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px 12px rgba(185, 181, 181, 0.514);
+    align-content: center;
+}
+
+.itemp {
+    text-align: center;
+    box-shadow: 1px 1px 8px rgba(185, 181, 181, 0.514);
+    width: 200px;
+    border-bottom: 1px solid rgb(57, 163, 233);
+}
+
+#partenaire {
+    width: 100px;
+    height: 100px;
+}
+
+.fas {
+    color: rgb(57, 163, 233)
+}
