@@ -11,21 +11,29 @@
 </head>
 
 <body>
+
     <header>
         <app-header></app-header>
     </header>
-
-    <div class="row">
-        <div class="col-4">
-            <app-side-bare></app-side-bare>
-        </div>
-        <div class="col-8">
-            <app-produit></app-produit>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <app-side-bare></app-side-bare>
+            </div>
+            <div class="col-8">
+                <br>
+                <br>
+                <app-listecommande></app-listecommande>
+                <br>
+                <app-listeproduits></app-listeproduits>
+            </div>
         </div>
     </div>
+
     <footer>
         <app-footer></app-footer>
     </footer>
+
 
 
 </body>

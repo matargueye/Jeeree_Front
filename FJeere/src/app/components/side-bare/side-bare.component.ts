@@ -49,6 +49,7 @@ export class SideBareComponent implements OnInit {
     }
    
   }
+
   isVendeur() {
       if ( this.roles[0] === 'ROLE_VENDEUR') {
         return true;
@@ -59,5 +60,6 @@ export class SideBareComponent implements OnInit {
       return true;
     }
   }
+
 
 }

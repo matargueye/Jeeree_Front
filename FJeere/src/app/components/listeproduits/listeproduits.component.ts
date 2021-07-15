@@ -22,12 +22,8 @@ export class ListeproduitsComponent implements OnInit {
     this.listeproduit.getAllProduits().subscribe( produits => {
         this. produits =  produits;
         console.log(this. produits);
-        
-        
+          
     });
-
-  
-  
 }
 
   addPanier(produit:Produit) {

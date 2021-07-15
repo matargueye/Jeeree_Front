@@ -22,5 +22,19 @@ export class ProduitsService {
   return this.http.get<[Produit]>(`${environment.apiUrl}/liste/produits/` +id);
  }
 
+
+ getAppareille() {
+  return this.http.get<[Produit]>(`${environment.apiUrl}/liste/produits/appareilles` );
+   
+  }
+  getFruit() {
+    return this.http.get<[Produit]>(`${environment.apiUrl}/liste/produits/fruits` );
+     
+    }
+
+    getLegume() {
+      return this.http.get<[Produit]>(`${environment.apiUrl}/liste/produits/legumes` );
+       
+      }
 }
 

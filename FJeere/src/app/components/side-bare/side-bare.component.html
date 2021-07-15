@@ -1,53 +1,87 @@
-<div class="produits">
-    <h1 class="categories">Catégorie produits
+<div class="produits" *ngIf="isClient() ">
+    <h1 class=" categories ">
+        {{ email}}
+    </h1>
+    <br>
+    <p class="itemp " *ngIf="isClient() ">
+        <a class="nav-link" href="/panier">Panier</a>
+    </p>
+
+    <p class="itemp " *ngIf="isClient() ">
+        <a class="nav-link" href="/liste_commande">Commandes</a>
+    </p>
+
+
+    <p class="itemp " *ngIf="isClient() ">
+        <a class="item ">Historiques</a>
+    </p>
+
+
+    <p class="itemp " *ngIf="isClient() ">
+        <a class="item ">Services</a>
+    </p>
+
+
+    <p class="itemp " *ngIf="isClient() ">
+        <a class="item " href="/edit_client">Paramaitre </a>
+    </p>
+    <br>
+</div>
+
+<div class="produits ">
+    <h1 class="categories ">Catégorie produits
 
     </h1>
     <br>
-    <p class="itemp"> <a>Chaussures</a></p>
+    <p class="itemp "> <a>Chaussures</a></p>
 
-    <p class="itemp"><a class="item">Vêtements</a></p>
-
-
-    <p class="itemp"><a class="item">Accessoires</a></p>
+    <p class="itemp "><a class="item ">Vêtements</a></p>
 
 
-    <p class="itemp"><a class="item">Apareilles</a></p>
+    <p class="itemp "><a class="item ">Accessoires</a></p>
 
 
-    <p class="itemp"><a class="item">Fuits </a></p>
+    <p class="itemp ">
+        <a class="item " href="/appareille">Apareilles</a></p>
 
 
-    <p class="itemp"><a class="item">Légumes</a></p>
+    <p class="itemp "><a class="item ">Fuits </a></p>
+
+
+    <p class="itemp "><a class="item ">Légumes</a></p>
+
+</div>
+
+<br>
+<br>
+<br>
+<div class="partenaires ">
+    <h1 class="categories ">Partenaires</h1>
+    <br>
+    <br>
+    <img src="/assets/vendeurs.jpg " alt="partenaire " class="partenaire ">
+    <br>
+    <a class="item ">Vendeurs</a>
+    <br>
+    <img src="/assets/Livreur.jpg " alt="livreurs " class="partenaire ">
+    <br>
+
+    <a class="item "> Livreur</a>
 
 </div>
 <br>
 <br>
 <br>
 <div>
-    <h1 class="categories">Partenaires</h1>
+    <h1 class="categories ">Contacts</h1>
     <br>
     <br>
 
-    <img src="/assets/vendeurs.jpg" alt="partenaire" id="partenaire">
+    <a class="item ">Tél:77 623 63 27</a>
     <br>
-    <a class="item">Vendeurs</a>
-    <br>
-    <img src="/assets/Livreur.jpg" alt="livreurs" id="partenaire">
-    <br>
-
-    <a class="item"> Livreur</a>
-
-</div>
-<div>
-    <h1 class="categories">Contacts</h1>
+    <a class="item ">Tél:77 623 63 27 </a>
     <br>
     <br>
-
-    <a class="item">Tél:77 623 63 27</a>
-    <br>
-    <a class="item">Tél:77 623 63 27 </a>
-    <br>
-    <br>
-    <button class="" (click)="onLogout()">Deconnexion</button>
+    <button class=" " (click)="onLogout() ">Deconnexion</button>
 
 </div>

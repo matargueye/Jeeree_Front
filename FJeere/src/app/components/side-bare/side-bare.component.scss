@@ -40,9 +40,14 @@
     border-bottom: 1px solid rgb(57, 163, 233);
 }
 
-#partenaire {
+.partenaires {
+    text-align: center;
+}
+
+.partenaire {
     width: 100px;
     height: 100px;
+    align-content: center;
 }
 
 .fas {

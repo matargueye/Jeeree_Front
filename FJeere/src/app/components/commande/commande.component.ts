@@ -22,18 +22,14 @@ export class CommandeComponent implements OnInit {
   total = 0;
 
   constructor(private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
     private commandeservice: CommandeService,
-    private panier:PanierService) { }
+    ) { }
 
   ngOnInit(): void {
 
     this.produits = JSON.parse(localStorage.getItem('cart'));
     this.roles = JSON.parse(localStorage.getItem('roles'));
-    this.token = JSON.parse(localStorage.getItem('token'));
     
-
     this.form = this.formBuilder.group({
   
       produit: [this.formBuilder.array([]), Validators.required]

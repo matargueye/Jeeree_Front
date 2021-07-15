@@ -1,27 +1,25 @@
-import { AuthentificationComponent } from './components/authentification/authentification.component';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CompteClientComponent } from './components/compte-client/compte-client.component';
-import { ListeproduitsComponent } from './components/listeproduits/listeproduits.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBareComponent } from './components/side-bare/side-bare.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AcceuilleComponent } from './pages/acceuille/acceuille.component';
 import { ConnexionclientComponent } from './pages/connexionclient/connexionclient.component';
 import { CreationCompteClientComponent } from './pages/creation-compte-client/creation-compte-client.component';
-import { ProduitComponent } from './components/produit/produit.component';
-import { ProduitSelecteComponent } from './pages/produit-selecte/produit-selecte.component';
-import { PanierComponent } from './components/panier/panier.component';
 import { EspaceclientComponent } from './pages/espaceclient/espaceclient.component';
 import { PaniersComponent } from './pages/paniers/paniers.component';
 import { CommandeComponent } from './components/commande/commande.component';
 import { NavbarrComponent } from './components/navbarr/navbarr.component';
+import { UsercommandeComponent } from './pages/usercommande/usercommande.component';
+import { AppareilleComponent } from './components/appareille/appareille.component';
+import { ModifierCLientComponent } from './pages/modifier-client/modifier-client.component';
 
 
 const routes: Routes = [
   {
     path:'',
-    component: AcceuilleComponent
+    component:AcceuilleComponent
   },
 
   {
@@ -70,9 +68,18 @@ const routes: Routes = [
     component:NavbarrComponent
   },
   
-
-
-  
+  {
+    path:'liste_commande',
+    component:UsercommandeComponent
+  }, 
+  {
+    path:'appareille',
+    component:AppareilleComponent
+  },
+  {
+    path:'edit_client',
+    component:ModifierCLientComponent
+  },
   
 ];
 

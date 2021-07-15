@@ -21,6 +21,12 @@ export class ListecommandeComponent implements OnInit {
       
   });
   }
+  onStatus(id: number) {
+    this.listecommande.DeletCommande(id).subscribe(data => {
+      alert(JSON.stringify(data));
+      location.reload();
+    });
+  }
 
 
 }

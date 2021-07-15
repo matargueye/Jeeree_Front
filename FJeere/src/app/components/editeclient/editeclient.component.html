@@ -1,0 +1,66 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+        <label class="connexion">Modifier compte Compte</label>
+        <div class="col-4">
+            <div class="form-group">
+                <input type="text" formControlName="username" [value]="loginForm.value.username" class="form-control" />
+            </div>
+
+            <div class="form-group">
+
+
+                <input type="text" formControlName="nom" [value]="loginForm.value.nom" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="text" formControlName="prenom" [value]="loginForm.value.prenom" class="form-control" />
+            </div>
+
+
+            <div>
+                <div class="form-group ">
+
+                    <input type="text " formControlName="adresseclient " [value]="loginForm.value.adresseclient" class=" form-control " />
+
+                </div>
+                <div class="form-group ">
+                    <input type="text " formControlName="telclient" [value]="loginForm.value.telclient" class="form-control " />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <button [disabled]="loading " class="login ">
+    Modifier
+    </button>
+
+
+</form>
+<form [formGroup]="userForm " (ngSubmit)="onSubmit() ">
+
+    <div class="row ">
+        <label class="connexion ">Modifier compte Compte</label>
+        <div class="col-4 ">
+            <div>
+                <div class="form-group ">
+
+                    <input type="password " formControlName=" olderpassword " [value]="userForm.value. olderpassword " class=" form-control " />
+
+                </div>
+                <div class="form-group ">
+
+                    <input type=" password " formControlName="newpassword " [value]="userForm.value. newpassword " class="form-control " />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <button [disabled]="loading " class="login ">
+    Modifier
+    </button>
+
+
+</form>

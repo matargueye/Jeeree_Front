@@ -1,57 +1,76 @@
-<div class="container">
-
-    <div class="row" *ngFor="let produit of produits;">
-
-        <div class="col-sm">
-            <p class="nom"><br>{{ produit.designation }}<br>
-                <img [src]="urlimg+produit.image" class="produit" alt=" ... ">
+<div class="container" *ngIf="isClient()">
+    <button mat-raised-button (click)=" openDialogC() "> Commander </button>
+    <div class=" row " *ngFor="let produit of produits; ">
+        <div class="col-4 ">
+            <p class="nom "><br>{{ produit.designation }}<br>
+                <img [src]="urlimg+produit.image " class="produit " alt=" ... ">
         </div>
-        <div class="col-sm">
-
-        </div>
-        <div class="col-sm">
-            <table class="table">
+        <div class=col-10>
+            <table class="table table-bordered table-light ">
                 <thead>
-
                     <tr>
-                        <th scope="col">Prix unitaire</th>
-                        <th scope="col">Quantité</th>
-                        <th scope="col">Prix totale</th>
-                        <th scope="col">Action</th>
+                        <th class="col ">Pix</th>
+                        <th class="col ">Quantité</th>
+                        <th class="col ">Totale</th>
+                        <th class="col ">ACTION</th>
                     </tr>
                 </thead>
-                <tbody *ngFor="let produit of produits;">
+                <tbody>
                     <tr>
-
                         <td>{{produit.prixunitaire}}</td>
                         <td>{{produit.quantite}}</td>
-
-
+                        <td>{{ total }}</td>
                         <td>
-                            <div class="d-flex align-items-center">
-                                <span><button class="" (click)="addQuantity(produit.id)"> + </button></span>
-                                <span><button class="" (click)="delQuantity(produit.id)" >- </button></span>
-                                <span><button class="btn btn-danger" (click)= "removeCart(produit.id)" >X</button></span>
+                            <div class="d-flex align-items-center ">
+                                <span><button class=" " (click)="addQuantity(produit.id) "> + </button></span>
+                                <span><button class=" " (click)="delQuantity(produit.id) " >- </button></span>
+                                <span><button class="btn btn-danger " (click)= "removeCart(produit.id) " >X</button></span>
                             </div>
                         </td>
-                        <tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="5" class="text-right">
-                            <h3>Total:</h3>
-                        </td>
-                        <td>
-                            <h3>{{ total }}</h3>
-                        </td>
-                        <td>
+                    </tr>
 
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+<div class="container ">
+    <button mat-raised-button (click)=" openDialog() "> Connexion </button>
+    <div class=" row " *ngFor="let produit of produits; ">
+        <div class="col-4 ">
+            <p class="nom "><br>{{ produit.designation }}<br>
+                <img [src]="urlimg+produit.image " class="produit " alt=" ... ">
+        </div>
+        <div class=col-10>
+            <table class="table table-bordered table-light ">
+                <thead>
+                    <tr>
+                        <th class="col ">Pix</th>
+                        <th class="col ">Quantité</th>
+                        <th class="col ">Totale</th>
+                        <th class="col ">ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{produit.prixunitaire}}</td>
+                        <td>{{produit.quantite}}</td>
+                        <td>{{ total }}</td>
+                        <td>
+                            <div class="d-flex align-items-center ">
+                                <span><button class=" " (click)="addQuantity(produit.id) "> + </button></span>
+                                <span><button class=" " (click)="delQuantity(produit.id) " >- </button></span>
+                                <span><button class="btn btn-danger " (click)= "removeCart(produit.id) " >X</button></span>
+                            </div>
                         </td>
                     </tr>
-                </tfoot>
+
+                </tbody>
             </table>
+
         </div>
+
     </div>
-    <span><button class="commande" routerLink="/commande"> commander </button></span>
 </div>
-<br>

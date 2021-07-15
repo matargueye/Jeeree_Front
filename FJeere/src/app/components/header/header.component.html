@@ -96,8 +96,7 @@
                             </li>
 
                             <li class=" nav-item ">
-                                <a class="nav-link " href="/login ">Connexion</a>
-
+                                <button mat-raised-button routerLink="/login"> Connexion</button>
                             </li>
 
                         </ul>
@@ -105,8 +104,8 @@
 
                     </div>
 
-                    <button class="btn btn-panier   float-right">
-            <mat-icon >shopping_cart</mat-icon>
+                    <button class="btn btn-panier float-right ">
+            <mat-icon  routerLink="/panier">shopping_cart</mat-icon>
             {{nbProduit}}
 
           </button>
@@ -116,8 +115,8 @@
         </div>
 
     </div>
-    <div class="row">
-        <img src="./assets/jeere_shop.jpg " alt="jeere" id="mondiv">
+    <div class="row ">
+        <img src="./assets/jeere_shop.jpg " alt="jeere " id="mondiv ">
 
     </div>
 

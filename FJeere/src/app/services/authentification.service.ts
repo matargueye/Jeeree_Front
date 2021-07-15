@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import{ HttpClient } from '@angular/common/http'
+import{ HttpClient ,HttpRequest,HttpHandler,HttpEvent} from '@angular/common/http'
 import { environment } from 'src/environments/environment';
 import { User } from '../models/user';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -21,6 +21,8 @@ export class AuthentificationService {
       this.currentUser = this.currentUserSubject.asObservable();
   }
 
+
+
   public get currentUserValue(): any {
       return this.currentUserSubject.value;
   }
@@ -39,6 +41,9 @@ export class AuthentificationService {
             this.currentUserSubject.next(user);
             return user;
         }));
+}
+public getToken(): string {
+  return localStorage.getItem('token');
 }
 
 logout() {

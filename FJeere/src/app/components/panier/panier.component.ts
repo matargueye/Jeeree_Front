@@ -5,6 +5,8 @@ import { Produit } from 'src/app/models/produit';
 import {MatDialog,MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { CommandeComponent } from '../commande/commande.component';
 import { CommandeService } from 'src/app/services/commande.service';
+import { ConnexionclientComponent } from 'src/app/pages/connexionclient/connexionclient.component';
+import { AuthentificationComponent } from '../authentification/authentification.component';
 
 @Component({
   selector: 'app-panier',
@@ -17,13 +19,14 @@ export class PanierComponent implements OnInit {
   urlimg = 'data:image/png;base64,';
   totalUpdate = new BehaviorSubject([]);
   total = 0;
+  roles: string;
 
   constructor(private panier:PanierService,
     public dialog: MatDialog,
     private service:CommandeService) { }
 
   ngOnInit(): void {
-    
+    this.roles = JSON.parse(localStorage.getItem('roles'));
     this.produits=JSON.parse(localStorage.getItem('cart'));
     console.log( this.produits);
 
@@ -72,7 +75,25 @@ export class PanierComponent implements OnInit {
   }
 
   openDialog(){
-    
-    this.dialog.open(CommandeComponent);
+ 
+    this.dialog.open(AuthentificationComponent);
       }
+      openDialogC(){
+ 
+        this.dialog.open(CommandeComponent);
+          }
+    
+
+  isClient() {
+    if(this.roles){
+      if ( this.roles["0"] === "ROLE_CLIENT") {
+        console.log(this.roles["0"] === "ROLE_CLIENT")
+        return true;
+      }
+
+    }
+   
+  }
+
+  
 }
