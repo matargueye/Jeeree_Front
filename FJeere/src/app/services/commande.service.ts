@@ -51,7 +51,7 @@ getCommande(): Observable<any[]>  {
 
 DeletCommande(id:number) {
   const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'));
-  return this.http.delete<any[]>(`${environment.apiUrl}/api/commandes` +id , {headers}
+  return this.http.delete<any[]>(`${environment.apiUrl}/api/commandes/` +id , {headers}
   );
 }
 }

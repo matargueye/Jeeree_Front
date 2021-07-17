@@ -25,14 +25,14 @@ export class EditeclientComponent implements OnInit {
       username: ['', Validators.required],
       nom:  ['', Validators.required],
       prenom: ['', Validators.required],
-      adresseclient: ['', Validators.required],
-      telclient: ['', Validators.required],
+      AdresseClient: ['', Validators.required],
+      TelClient: ['', Validators.required],
      
   });
   
   this.userForm = this.formBuilder.group({
-    olderpassword: ['', Validators.required],
-    newpassword: ['', Validators.required],
+   oldPassword: ['', Validators.required],
+   newPassword: ['', Validators.required],
   
 
    
@@ -49,8 +49,8 @@ export class EditeclientComponent implements OnInit {
   };
 
   const  pass = {
-    olderpassword: this.userForm.value.username,
-    newpassword: this.userForm.value.password,
+    oldPassword: this.userForm.value.username,
+   newPassword: this.userForm.value.password,
     
 };
 
