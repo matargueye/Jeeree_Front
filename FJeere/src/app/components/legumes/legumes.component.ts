@@ -5,11 +5,12 @@ import { PanierService } from 'src/app/services/panier.service';
 import { ProduitsService } from 'src/app/services/produits.service';
 
 @Component({
-  selector: 'app-fruit',
-  templateUrl: './fruit.component.html',
-  styleUrls: ['./fruit.component.scss']
+  selector: 'app-legumes',
+  templateUrl: './legumes.component.html',
+  styleUrls: ['./legumes.component.scss']
 })
-export class FruitComponent implements OnInit {
+export class LegumesComponent implements OnInit {
+
   produits:Produit[];
   urlimg = 'data:image/png;base64,';
   itemInCart: number;
@@ -27,5 +28,4 @@ export class FruitComponent implements OnInit {
   addPanier(produit:Produit) {
     this.panier.addCart(produit);
   }
-
 }

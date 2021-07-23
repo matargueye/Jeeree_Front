@@ -42,8 +42,14 @@ import { AjoutproduitComponent } from './vendeurs/ajoutproduit/ajoutproduit.comp
 import { ListeproduitComponent } from './vendeurs/listeproduit/listeproduit.component';
 import { AppareilleComponent } from './components/appareille/appareille.component';
 import { FruitComponent } from './components/fruit/fruit.component';
-import { LegumeComponent } from './components/legume/legume.component';
-import { ModifierCLientComponent } from './pages/modifier-client/modifier-client.component'; 
+
+import { ModifierCLientComponent } from './pages/modifier-client/modifier-client.component';
+
+import { LegumesComponent } from './components/legumes/legumes.component';
+import { AccessoireComponent } from './components/accessoire/accessoire.component';
+import { AccessoireHComponent } from './components/accessoire-h/accessoire-h.component';
+import { AccessoireFComponent } from './components/accessoire-f/accessoire-f.component';
+import { AccessoireEComponent } from './components/accessoire-e/accessoire-e.component'; 
 
 
 
@@ -76,8 +82,12 @@ import { ModifierCLientComponent } from './pages/modifier-client/modifier-client
     ListeproduitComponent,
     AppareilleComponent,
     FruitComponent,
-    LegumeComponent,
     ModifierCLientComponent,
+    LegumesComponent,
+    AccessoireComponent,
+    AccessoireHComponent,
+    AccessoireFComponent,
+    AccessoireEComponent,
 
  
    

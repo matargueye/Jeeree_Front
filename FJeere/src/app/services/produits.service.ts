@@ -24,16 +24,16 @@ export class ProduitsService {
 
 
  getAppareille() {
-  return this.http.get<[Produit]>(`${environment.apiUrl}/liste/produits/appareilles` );
+  return this.http.get<[Produit]>(`${environment.apiUrl}/liste/appareilles` );
    
   }
   getFruit() {
-    return this.http.get<[Produit]>(`${environment.apiUrl}/liste/produits/fruits` );
+    return this.http.get<[Produit]>(`${environment.apiUrl}/liste/fruits` );
      
-    }
+ }
 
-    getLegume() {
-      return this.http.get<[Produit]>(`${environment.apiUrl}/liste/produits/legumes` );
+ getLegume() {
+      return this.http.get<[Produit]>(`${environment.apiUrl}/liste/legumes` );
        
       }
 }
