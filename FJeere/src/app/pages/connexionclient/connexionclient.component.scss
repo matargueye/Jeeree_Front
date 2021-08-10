@@ -1,14 +1,15 @@
 .container {
     width: 100%;
-    height: auto
+    height: auto;
 }
 
 .row {
-    margin-top: 60px;
+    margin-top: -50px;
     margin-right: 20px;
     height: auto;
     box-shadow: 1px 1px 12px rgba(185, 181, 181, 0.514);
     background-color: rgba(248, 250, 252, 0.993);
+    border-radius: 5px 10px 0 5px;
 }
 
 .col-4 {
@@ -23,5 +24,4 @@
     float: right;
     width: 700px;
     height: auto;
-    margin-left: 40px;
 }

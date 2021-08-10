@@ -13,9 +13,9 @@
     font-size: 15px;
 }
 
-#mondiv {
+.mondiv {
     width: 100%;
-    height: 500px;
+    height: 450px;
 }
 
 .container-fluid {
@@ -28,7 +28,7 @@
 
 .navbar {
     width: 100%;
-    position: fixed;
+    position: relative;
 }
 
 .dropdown-menu {

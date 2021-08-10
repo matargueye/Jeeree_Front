@@ -36,5 +36,59 @@ export class ProduitsService {
       return this.http.get<[Produit]>(`${environment.apiUrl}/liste/legumes` );
        
       }
+getAccessoire() {
+        return this.http.get<[Produit]>(`${environment.apiUrl}/liste/accessoire` );
+         
+        }
+
+
+getAccessoireH() {
+          return this.http.get<[Produit]>(`${environment.apiUrl}/liste/accessoire/homme` );
+           
+          }
+
+getAccessoireF() {
+return this.http.get<[Produit]>(`${environment.apiUrl}/liste/accessoire/femme` );
+   
+  }
+getAccessoireE() {
+    return this.http.get<[Produit]>(`${environment.apiUrl}/liste/accessoire/enfant` );
+       
+      }
+getChaussure() {
+  return this.http.get<[Produit]>(`${environment.apiUrl}/liste/chaussure` );
+           
+          }
+getChaussureH() {
+  return this.http.get<[Produit]>(`${environment.apiUrl}/liste/chaussure/homme` );
+               
+              }  
+getChaussureF() {
+ return this.http.get<[Produit]>(`${environment.apiUrl}/liste/chaussure/femme` );
+                   
+  }   
+getChaussureE() {
+    return this.http.get<[Produit]>(`${environment.apiUrl}/liste/chaussure/enfant` );
+                      
+     }  
+getVetement() {
+ return this.http.get<[Produit]>(`${environment.apiUrl}/liste/vetement` );
+                        
+  }  
+  getVetementH() {
+    return this.http.get<[Produit]>(`${environment.apiUrl}/liste/vetement/homme` );
+             
 }
 
+
+getVetementF() {
+  return this.http.get<[Produit]>(`${environment.apiUrl}/liste/vetement/femme` );
+   
+  
+}
+getVetementE() {
+return this.http.get<[Produit]>(`${environment.apiUrl}/liste/vetement/enfant` );
+           
+}
+
+}

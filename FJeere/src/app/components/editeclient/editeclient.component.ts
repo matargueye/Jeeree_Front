@@ -10,69 +10,34 @@ import { ClientService } from 'src/app/services/client.service';
 export class EditeclientComponent implements OnInit {
 
   loginForm: FormGroup;
-  userForm: FormGroup;
   loading = false;
   submitted = false;
   returnUrl: string;
   error = '';
   formConnexion: any;
+
   constructor(private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router, private Client:ClientService) { }
+  private route: ActivatedRoute,
+  private router: Router, private Client:ClientService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      nom:  ['', Validators.required],
-      prenom: ['', Validators.required],
-      AdresseClient: ['', Validators.required],
-      TelClient: ['', Validators.required],
+    oldPassword:  ['', Validators.required],
+    newPassword: ['', Validators.required],
      
   });
-  
-  this.userForm = this.formBuilder.group({
-   oldPassword: ['', Validators.required],
-   newPassword: ['', Validators.required],
-  
-
-   
-});
      
   }
   onSubmit(){
     const  client = {
-      username: this.loginForm.value.username,
-      nom: this.loginForm.value.nom ,
-      prenom:this.loginForm.value.prenom,
-      adresseclient:this.loginForm.value.adresseclient,
-      telclient:this.loginForm.value.telclient,
+      oldPassword: this.loginForm.value.oldPassword ,
+      newPassword:this.loginForm.value.newPassword,
   };
-
-  const  pass = {
-    oldPassword: this.userForm.value.username,
-   newPassword: this.userForm.value.password,
-    
-};
-
-
-
- this.Client.EditeClient(client).subscribe(
-  data => {
-  console.log(data);
-    
-
-  },
-  error => {
-   /* this.errorMessage = 'username ou mot de passe incorrect';*/
-    console.log(error);
-
-});
-
-  this.Client.EditePasswordClient(pass).subscribe(
+  
+  this. Client.EditeClient(client).subscribe(
     data => {
-    alert('Votre mot de pass  a été modifier avec succes');
-    console.log(data);
-   
+      console.log(data);
+      return this.router.navigate(['/client']);
        
 
     },
@@ -82,5 +47,8 @@ export class EditeclientComponent implements OnInit {
 
   });
   }
+  
+
+
 
 }

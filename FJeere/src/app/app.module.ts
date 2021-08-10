@@ -26,10 +26,7 @@ import { NavbarrComponent } from './components/navbarr/navbarr.component';
 import { CommandeComponent } from './components/commande/commande.component';
 import { ListecommandeComponent } from './components/listecommande/listecommande.component';
 import {MatDialogModule} from '@angular/material/dialog'; 
-import { PanierService } from './services/panier.service';
-import { CommandeService } from './services/commande.service';
 import {MatButtonModule} from '@angular/material/button';
-import { JwtInterceptor } from '@auth0/angular-jwt';
 import { JwtInterceptorService } from './services/jwt-interceptor.service';
 import {MatTableModule} from '@angular/material/table';
 import { UsercommandeComponent } from './pages/usercommande/usercommande.component';
@@ -39,17 +36,39 @@ import { EspacelivreurComponent } from './livreurs/espacelivreur/espacelivreur.c
 import { EditlivreurComponent } from './livreurs/editlivreur/editlivreur.component';
 import { ComptevendeurComponent } from './vendeurs/comptevendeur/comptevendeur.component';
 import { AjoutproduitComponent } from './vendeurs/ajoutproduit/ajoutproduit.component';
-import { ListeproduitComponent } from './vendeurs/listeproduit/listeproduit.component';
+
 import { AppareilleComponent } from './components/appareille/appareille.component';
 import { FruitComponent } from './components/fruit/fruit.component';
-
 import { ModifierCLientComponent } from './pages/modifier-client/modifier-client.component';
-
 import { LegumesComponent } from './components/legumes/legumes.component';
 import { AccessoireComponent } from './components/accessoire/accessoire.component';
 import { AccessoireHComponent } from './components/accessoire-h/accessoire-h.component';
 import { AccessoireFComponent } from './components/accessoire-f/accessoire-f.component';
-import { AccessoireEComponent } from './components/accessoire-e/accessoire-e.component'; 
+import { AccessoireEComponent } from './components/accessoire-e/accessoire-e.component';
+import { ChaussureComponent } from './components/chaussure/chaussure.component';
+import { ChaussureHComponent } from './components/chaussure-h/chaussure-h.component';
+import { ChaussureFComponent } from './components/chaussure-f/chaussure-f.component';
+import { ChaussureEComponent } from './components/chaussure-e/chaussure-e.component';
+import { VetementComponent } from './components/vetement/vetement.component';
+import { VetementHComponent } from './components/vetement-h/vetement-h.component';
+import { VetementFComponent } from './components/vetement-f/vetement-f.component';
+import { VetementEComponent } from './components/vetement-e/vetement-e.component';
+import { ListeAppareilleComponent } from './ListesProduits/liste-appareille/liste-appareille.component';
+import { ListeAccessoireComponent } from './ListesProduits/liste-accessoire/liste-accessoire.component';
+import { ListeVetementComponent } from './ListesProduits/liste-vetement/liste-vetement.component';
+import { ListeVhommeComponent } from './ListesProduits/liste-vhomme/liste-vhomme.component';
+import { ListeVetementFComponent } from './ListesProduits/liste-vetement-f/liste-vetement-f.component';
+import { ListeVetementEComponent } from './ListesProduits/liste-vetement-e/liste-vetement-e.component';
+import { ListeChaussureComponent } from './ListesProduits/liste-chaussure/liste-chaussure.component';
+import { ListeChaussureHComponent } from './ListesProduits/liste-chaussure-h/liste-chaussure-h.component';
+import { ListeChaussureFComponent } from './ListesProduits/liste-chaussure-f/liste-chaussure-f.component';
+import { ListeChaussureEComponent } from './ListesProduits/liste-chaussure-e/liste-chaussure-e.component';
+import { ListeAccessoireHComponent } from './ListesProduits/liste-accessoire-h/liste-accessoire-h.component';
+import { ListeAccessoireFComponent } from './ListesProduits/liste-accessoire-f/liste-accessoire-f.component';
+import { ListeAccessoireEComponent } from './ListesProduits/liste-accessoire-e/liste-accessoire-e.component';
+import { ListeFruitComponent } from './ListesProduits/liste-fruit/liste-fruit.component';
+import { ListeLegumeComponent } from './ListesProduits/liste-legume/liste-legume.component';
+import { PrechercherComponent } from './components/prechercher/prechercher.component';
 
 
 
@@ -79,7 +98,7 @@ import { AccessoireEComponent } from './components/accessoire-e/accessoire-e.com
     EditlivreurComponent,
     ComptevendeurComponent,
     AjoutproduitComponent,
-    ListeproduitComponent,
+ 
     AppareilleComponent,
     FruitComponent,
     ModifierCLientComponent,
@@ -88,6 +107,31 @@ import { AccessoireEComponent } from './components/accessoire-e/accessoire-e.com
     AccessoireHComponent,
     AccessoireFComponent,
     AccessoireEComponent,
+    ChaussureComponent,
+    ChaussureHComponent,
+    ChaussureFComponent,
+    ChaussureEComponent,
+    VetementComponent,
+    VetementHComponent,
+    VetementFComponent,
+    VetementEComponent,
+    ListeAppareilleComponent,
+    ListeAccessoireComponent,
+    ListeVetementComponent,
+    ListeVhommeComponent,
+    ListeVetementFComponent,
+    ListeVetementEComponent,
+    ListeChaussureComponent,
+    ListeChaussureHComponent,
+    ListeChaussureFComponent,
+    ListeChaussureEComponent,
+    ListeAccessoireHComponent,
+    ListeAccessoireFComponent,
+    ListeAccessoireEComponent,
+    ListeFruitComponent,
+    ListeLegumeComponent,
+    PrechercherComponent,
+ 
 
  
    

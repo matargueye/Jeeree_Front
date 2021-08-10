@@ -50,9 +50,13 @@ export class SideBareComponent implements OnInit {
    
   }
 
+
+ 
+
+
   isVendeur() {
       if ( this.roles[0] === 'ROLE_VENDEUR') {
-        return true;
+        return false;
       }
     }
   isLivreur() {

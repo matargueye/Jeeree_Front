@@ -1,0 +1,50 @@
+.col-md-12 {}
+
+.card {
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    align-content: center;
+    margin: 20px;
+    box-shadow: 1px 1px 12px rgba(181, 184, 185, 0.514);
+}
+
+.produit {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.prix {
+    color: red;
+}
+
+.commmade {
+    border: 1px solid color rgb(90, 120, 139);
+    box-shadow: 1px 1px 12px rgba(181, 184, 185, 0.514);
+    width: 200px;
+    height: 30px;
+    color: rgb(46, 148, 216);
+    position: absolute;
+    font-size: 15px;
+}
+
+.rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color .4s;
+}
+
+.rating a:hover,
+.rating a:focus,
+.rating a:hover~a,
+.rating a:focus~a {
+    color: rgb(46, 148, 216);
+    cursor: pointer;
+}
+
+.btn {
+    box-shadow: 1px 1px 12px rgba(185, 181, 181, 0.514);
+}

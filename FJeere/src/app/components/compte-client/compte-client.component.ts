@@ -30,8 +30,8 @@ export class CompteClientComponent implements OnInit {
       password: ['', Validators.required],
       nom:  ['', Validators.required],
       prenom: ['', Validators.required],
-      adresse_client: ['', Validators.required],
-      tel_client: ['', Validators.required],
+      adresseclient: ['', Validators.required],
+      telclient: ['', Validators.required],
 
      
   });
@@ -44,14 +44,14 @@ export class CompteClientComponent implements OnInit {
       password: this.loginForm.value.password,
       nom: this.loginForm.value.nom ,
       prenom:this.loginForm.value.prenom,
-      adresse_client:this.loginForm.value.adresse_client,
-      tel_client:this.loginForm.value.tel_client,
+      adresseclient:this.loginForm.value.adresseclient,
+      telclient:this.loginForm.value.telclient,
   };
   
   this.clientservice.CreateCompteClient(client).subscribe(
     data => {
       console.log(data);
-      return this.router.navigate(['/compte_client']);
+      return this.router.navigate(['/login']);
        
 
     },

@@ -94,6 +94,17 @@ export class PanierComponent implements OnInit {
     }
    
   }
+  
+  isnotClient() {
+    if(this.roles){
+      if ( this.roles["0"] != "ROLE_CLIENT" ) {
+        console.log(this.roles["0"] ! = "ROLE_CLIENT")
+        return false;
+      }
+
+    }
+   
+  }
 
   
 }

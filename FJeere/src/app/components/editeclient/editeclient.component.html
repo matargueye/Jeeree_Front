@@ -1,31 +1,31 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
     <div class="row">
         <label class="connexion">Modifier compte Compte</label>
         <div class="col-4">
             <div class="form-group">
-                <input type="text" formControlName="username" [value]="loginForm.value.username" class="form-control" />
+                <input type="text" formControlName="username" class="form-control" placeholder="Username" />
             </div>
 
-            <div class="form-group">
+            <div class=" form-group ">
 
 
-                <input type="text" formControlName="nom" [value]="loginForm.value.nom" class="form-control" />
+                <input type="text " formControlName="nom" class="form-control" placeholder="Nom" />
             </div>
 
-            <div class="form-group">
-                <input type="text" formControlName="prenom" [value]="loginForm.value.prenom" class="form-control" />
+            <div class="form-group ">
+                <input type="text " formControlName="prenom" class="form-control" placeholder="Prenom" />
             </div>
 
 
             <div>
                 <div class="form-group ">
 
-                    <input type="text " formControlName="AdresseClient " [value]="loginForm.value.AdresseClient" class=" form-control " />
+                    <input type="text " formControlName="AdresseClient" class=" form-control" placeholder="Adresse" />
 
                 </div>
                 <div class="form-group ">
-                    <input type="text " formControlName="TelClient" [value]="loginForm.value.TelClient" class="form-control " />
+                    <input type="text " formControlName="TelClient" class="form-control" placeholder="Tel" />
                 </div>
 
             </div>
@@ -36,29 +36,22 @@
     Modifier
     </button>
 
-
-</form>
-<form [formGroup]="userForm " (ngSubmit)="onSubmit() ">
+</form> -->
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
     <div class="row ">
         <label class="connexion ">Modifier compte Compte</label>
         <div class="col-4 ">
-            <div>
-                <div class="form-group ">
 
-                    <input type="password " formControlName=" oldPassword" [value]="userForm.value. oldPassword" class=" form-control " />
-
-                </div>
-                <div class="form-group ">
-
-                    <input type=" password " formControlName="newPassword" [value]="userForm.value. newPassword" class="form-control " />
-                </div>
-
+            <div class="form-group ">
+                <input type="password" formControlName="oldPassword" class="form-control" />
             </div>
-
+            <div class="form-group ">
+                <input type="password" formControlName="newPassword" class="form-control" />
+            </div>
         </div>
     </div>
-    <button [disabled]="loading " class="login ">
+    <button [disabled]="loading" class="login ">
     Modifier
     </button>
 

@@ -12,8 +12,24 @@ import { PaniersComponent } from './pages/paniers/paniers.component';
 import { CommandeComponent } from './components/commande/commande.component';
 import { NavbarrComponent } from './components/navbarr/navbarr.component';
 import { UsercommandeComponent } from './pages/usercommande/usercommande.component';
-import { AppareilleComponent } from './components/appareille/appareille.component';
 import { ModifierCLientComponent } from './pages/modifier-client/modifier-client.component';
+import { ListeAppareilleComponent } from './ListesProduits/liste-appareille/liste-appareille.component';
+import { ListeAccessoireComponent } from './ListesProduits/liste-accessoire/liste-accessoire.component';
+import { ListeVetementComponent } from './ListesProduits/liste-vetement/liste-vetement.component';
+import { ListeVhommeComponent } from './ListesProduits/liste-vhomme/liste-vhomme.component';
+import { ListeVetementFComponent } from './ListesProduits/liste-vetement-f/liste-vetement-f.component';
+import { ListeVetementEComponent } from './ListesProduits/liste-vetement-e/liste-vetement-e.component';
+import { ListeChaussureComponent } from './ListesProduits/liste-chaussure/liste-chaussure.component';
+import { ListeChaussureHComponent } from './ListesProduits/liste-chaussure-h/liste-chaussure-h.component';
+import { ListeChaussureFComponent } from './ListesProduits/liste-chaussure-f/liste-chaussure-f.component';
+import { ListeChaussureEComponent } from './ListesProduits/liste-chaussure-e/liste-chaussure-e.component';
+import { ListeAccessoireHComponent } from './ListesProduits/liste-accessoire-h/liste-accessoire-h.component';
+import { ListeAccessoireFComponent } from './ListesProduits/liste-accessoire-f/liste-accessoire-f.component';
+import { ListeAccessoireEComponent } from './ListesProduits/liste-accessoire-e/liste-accessoire-e.component';
+import { ListeFruitComponent } from './ListesProduits/liste-fruit/liste-fruit.component';
+import { ListeLegumeComponent } from './ListesProduits/liste-legume/liste-legume.component';
+import { PrechercherComponent } from './components/prechercher/prechercher.component';
+
 
 
 const routes: Routes = [
@@ -61,12 +77,6 @@ const routes: Routes = [
     path:'footer',
     component:FooterComponent
   },
-
-
-  {
-    path:'recherche',
-    component:NavbarrComponent
-  },
   
   {
     path:'liste_commande',
@@ -74,13 +84,119 @@ const routes: Routes = [
   }, 
   {
     path:'appareille',
-    component:AppareilleComponent
+    component:ListeAppareilleComponent
   },
   {
     path:'edit_client',
     component:ModifierCLientComponent
   },
   
+  {
+
+  path:'accessoire',
+  component:ListeAccessoireComponent
+
+},
+
+{
+
+  path:'accessoire_homme',
+  component:ListeAccessoireHComponent
+
+},
+{
+
+  path:'accessoire_femme',
+  component:ListeAccessoireFComponent
+
+},
+{
+
+  path:'accessoire_enfant',
+  component:ListeAccessoireEComponent
+
+},
+{
+
+  path:'vetement',
+  component:ListeVetementComponent
+  
+},
+
+
+{
+
+  path:'vetement_homme',
+  component:ListeVhommeComponent
+  
+},
+
+{
+
+  path:'vetement_femme',
+  component:ListeVetementFComponent
+  
+},
+
+
+{
+
+  path:'vetement_tenfant',
+  component:ListeVetementEComponent
+  
+},
+
+{
+
+  path:'chaussure',
+  component:ListeChaussureComponent
+  
+},
+
+{
+
+  path:'chaussure_homme',
+  component:ListeChaussureHComponent
+  
+},
+
+{
+
+  path:'chaussure_femme',
+  component:ListeChaussureFComponent
+  
+},
+
+{
+
+  path:'chaussure_enfant',
+  component:ListeChaussureEComponent
+  
+},
+
+{
+
+  path:'fruit',
+  component:ListeFruitComponent
+  
+},
+
+{
+
+  path:'legume',
+  component:ListeLegumeComponent
+  
+},
+
+{
+
+  path:'recherche',
+  component:PrechercherComponent
+  
+},
+
+
+
 ];
 
 @NgModule({

@@ -1,5 +1,9 @@
 .col-md-12 {}
 
+.container {
+    height: auto;
+}
+
 .card {
     width: 200px;
     height: 250px;
@@ -7,6 +11,10 @@
     align-content: center;
     margin: 20px;
     box-shadow: 1px 1px 12px rgba(181, 184, 185, 0.514);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    behavior: url(/PIE.htc);
 }
 
 .produit {
